@@ -279,7 +279,7 @@ int main()
 {   
 	auto start = chrono::system_clock::now();
 	cout << "Tworze macierz do mnozenia" << endl;
-	int m = 8;
+	int m = 4096;
 	float **tab2 = TworzTablice(m, 1);
 	float **tab = TworzTablice(m,1);
 	cout << "Tworze obiekty dekompozytowanaMacierz" << endl;
@@ -321,9 +321,11 @@ int main()
 	tabZdeko33 = new dekompozytowanaMacierz(deko3->tabC, deko3->half);
 	tabZdeko34 = new dekompozytowanaMacierz(deko3->tabD, deko3->half);
 	*/
+
 	cout << "Mnoze macierze " << endl;
 	auto watch = chrono::system_clock::now();
 	deko3->PomnozStrassenem(deko1, deko2);
+
 	/*
 	tabZdeko31->PomnozStrassenem(tabZdeko11, tabZdeko21);
 	tabZdeko32->PomnozStrassenem(tabZdeko12, tabZdeko22);
@@ -341,7 +343,7 @@ int main()
 	plik << " s\n";
 	plik.close();
 
-	deko3->Wypisz();
+	//deko3->Wypisz();
 	/*
 	tabZdeko34->Wypisz();
 	tabZdeko34->Wypisz();
